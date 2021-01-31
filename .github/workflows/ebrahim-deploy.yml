@@ -24,8 +24,10 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
-      - run: npm ci
-      - run: npm run build
+      - name: installing my packages
+        run: npm ci
+      - name:Build my App
+        run: npm run build
         env:
           NEXT_PUBLIC_BASE_PATH: /microphone-store
       - run: npm run export
