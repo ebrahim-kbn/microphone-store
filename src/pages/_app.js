@@ -24,10 +24,11 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
   },
 }));
+const prefix = process.env.NEXT_PUBLIC_BASE_PATH || "";
+
 export default function MyApp(props) {
   const { Component, pageProps } = props;
   const classes = useStyles();
-  const prefix = "/microphone-store";
 
   React.useEffect(() => {
     // Remove the server-side injected CSS.

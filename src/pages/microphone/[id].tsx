@@ -4,7 +4,7 @@ import { Microphone } from "../../../model/Microphone";
 import { openDB } from "../../openDB";
 import { useRouter } from "next/router";
 export type MicrophoneDetailsProps = Microphone;
-const prefix = "/microphone-store";
+const prefix = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
 const MicrophoneDetails = ({
   id,
