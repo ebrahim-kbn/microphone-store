@@ -27,6 +27,7 @@ const useStyles = makeStyles((theme) => ({
 export default function MyApp(props) {
   const { Component, pageProps } = props;
   const classes = useStyles();
+  const prefix = "/microphone-store";
 
   React.useEffect(() => {
     // Remove the server-side injected CSS.
@@ -39,6 +40,7 @@ export default function MyApp(props) {
   return (
     <React.Fragment>
       <Head>
+        <link rel="shortcut icon" href={prefix + "/favicon.ico"} />
         <title>My page</title>
         <meta
           name="viewport"

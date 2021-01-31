@@ -4,6 +4,7 @@ import { Microphone } from "../../../model/Microphone";
 import { openDB } from "../../openDB";
 import { useRouter } from "next/router";
 export type MicrophoneDetailsProps = Microphone;
+const prefix = "/microphone-store";
 
 const MicrophoneDetails = ({
   id,
@@ -24,7 +25,7 @@ const MicrophoneDetails = ({
       <div>{model}</div>
       <div>{price}</div>
       <div>
-        <img src={imageUrl} alt="" width="200px" height="200px" />
+        <img src={prefix + imageUrl} alt="" width="200px" height="200px" />
       </div>
     </div>
   );
