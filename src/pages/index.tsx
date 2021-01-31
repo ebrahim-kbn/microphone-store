@@ -11,7 +11,7 @@ import CardMedia from "@material-ui/core/CardMedia";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
-
+const prefix = "/microphone-store";
 const useStyles = makeStyles({
   root: {
     maxWidth: 345,
@@ -38,7 +38,7 @@ const Index = ({ microphones }: IndexProps) => {
                     component="img"
                     alt={microphone.brand + " " + microphone.model}
                     height="140"
-                    image={microphone.imageUrl}
+                    image={prefix + microphone.imageUrl}
                     title={microphone.brand + " " + microphone.model}
                   />
                   <CardContent>
